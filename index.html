@@ -1,77 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Agritech app</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-</head>
-<body>
-    <header class="bg-green-100 p-2 flex justify-between gap-4 ">
-        <div class="flex justify-between items-center text-sm mb-2 gap-2">
-            <span class="flex items-center gap-1">
-                <i class="bi bi-envelope text-1xl"></i>
-                <a href="#" class="hover:underline">support@agritech.com</a>
-            </span>
-            <span class="flex items-center gap-1 text-1xl">
-                <i class="bi bi-telephone text-1xl"></i> (0027) 99 98 97 96
-            </span>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+  </head>
+  <body>
+    <header class="bg-green-100 p-2 flex justify-between gap-4">
+      <div class="flex justify-between items-center text-sm mb-2 gap-2">
+        <span class="flex items-center gap-1">
+          <i class="bi bi-envelope text-1xl"></i>
+          <a href="#" class="hover:underline">support@agritech.com</a>
+        </span>
+        <span class="flex items-center gap-1 text-1xl">
+          <i class="bi bi-telephone text-1xl"></i> (0027) 99 98 97 96
+        </span>
+      </div>
+      <div class="flex items-center gap-2">
+        <img src="./images/logo.png" alt="Logo" class="w-12 h-12" />
+        <h2 class="font-bold text-xl">Agritech App</h2>
+      </div>
+      <div class="flex justify-between items-center">
+        <div class="flex items-center gap-4">
+          <div class="flex items-center gap-1">
+            <img src="./images/Niger.png" alt="" class="w-8 h-6" />
+            <span class="text-1xl">NE</span>
+          </div>
+          <div class="flex gap-2 text-xl">
+            <a href="#" class="hover:text-blue-500"
+              ><i class="bi bi-twitter-x"></i
+            ></a>
+            <a href="#" class="hover:text-blue-700"
+              ><i class="bi bi-facebook"></i
+            ></a>
+            <a href="#" class="hover:text-blue-600"
+              ><i class="bi bi-linkedin"></i
+            ></a>
+            <a href="#" class="hover:text-pink-500"
+              ><i class="bi bi-instagram"></i
+            ></a>
+            <a href="#" class="hover:text-black"
+              ><i class="bi bi-tiktok"></i
+            ></a>
+          </div>
         </div>
-        <div class="flex items-center gap-2">
-            <img src="./images/logo.png" alt="Logo" class="w-12 h-12">
-            <h2 class="font-bold text-xl">Agritech App</h2>
-        </div>
-        <div class="flex justify-between items-center">
-            
-            <div class="flex items-center gap-4">
-                <div class="flex items-center gap-1">
-                    <img src="./images/Niger.png" alt="" class="w-8 h-6">
-                    <span class="text-1xl">NE</span>
-                </div>
-                <div class="flex gap-2 text-xl">
-                    <a href="#" class="hover:text-blue-500"><i class="bi bi-twitter-x"></i></a>
-                    <a href="#" class="hover:text-blue-700"><i class="bi bi-facebook"></i></a>
-                    <a href="#" class="hover:text-blue-600"><i class="bi bi-linkedin"></i></a>
-                    <a href="#" class="hover:text-pink-500"><i class="bi bi-instagram"></i></a>
-                    <a href="#" class="hover:text-black"><i class="bi bi-tiktok"></i></a>
-                </div>
-            </div>
-        </div>
+      </div>
     </header>
-    
+
     <nav class="bg-white shadow p-4 flex justify-between items-center gap-4">
-        <div class="flex items-center border border-gray-300 rounded-lg overflow-hidden w-96">
-            <i class="bi bi-search text-lg px-3"></i>
-            <input 
-                type="search" 
-                placeholder="Search anything..." 
-                class="flex-1 border-l border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500 w-96"
-            >
-        </div>
-        <div class="flex gap-4">
-            <a href="#" class="hover:text-green-600 flex items-center gap-1">Home <i class="bi bi-arrow-up-right text-1xl"></i></a>
-            <a href="#" class="hover:text-green-600 flex items-center gap-1">Formations <i class="bi bi-arrow-up-right text-1xl"></i></a>
-            <a href="#" class="hover:text-green-600 flex items-center gap-1">Météo <i class="bi bi-arrow-up-right text-1xl"></i></a>
-            <a href="#" class="hover:text-green-600 flex items-center gap-1">Indicateurs <i class="bi bi-arrow-up-right text-1xl"></i></a>
-        </div>
-        <button class="bg-green-900 text-white px-4 py-1 rounded-full hover:bg-green-600 flex items-center gap-1">
-            Connect <i class="bi bi-box-arrow-in-left"></i>
-        </button>
+      <div
+        class="flex items-center border border-gray-300 rounded-lg overflow-hidden w-96">
+        <i class="bi bi-search text-lg px-3"></i>
+        <input
+          type="search"
+          placeholder="Search anything..."
+          class="flex-1 border-l border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500 w-96" />
+      </div>
+      <div class="flex gap-4">
+        <a href="#" class="hover:text-green-600 flex items-center gap-1"
+          >Home <i class="bi bi-arrow-up-right text-1xl"></i
+        ></a>
+        <a href="#" class="hover:text-green-600 flex items-center gap-1"
+          >Formations <i class="bi bi-arrow-up-right text-1xl"></i
+        ></a>
+        <a href="#" class="hover:text-green-600 flex items-center gap-1"
+          >Météo <i class="bi bi-arrow-up-right text-1xl"></i
+        ></a>
+        <a href="#" class="hover:text-green-600 flex items-center gap-1"
+          >Indicateurs <i class="bi bi-arrow-up-right text-1xl"></i
+        ></a>
+      </div>
+      <button
+        class="bg-green-900 text-white px-4 py-1 rounded-full hover:bg-green-600 flex items-center gap-1">
+        Connect <i class="bi bi-box-arrow-in-left"></i>
+      </button>
     </nav>
 
-    <main class="bg-cover bg-center h-96 flex items-center" style="background-image: url('./images/Home_Carroussel.jpg');">
-        <div class="flex flex-col justify-between items-center p-4">
-            <div class="text-white mb-6">
-            <h2 class="text-2xl font-bold">Agricultural and Organic</h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis sint impedit id qui corrupti  <br>soluta beatae velit esse necessitatibus?
-                 Quibusdam inventore maiores esse soluta eaque veniam expedita perferendis doloremque dignissimos.</p>
+    <div
+      class="bg-cover bg-center h-130 flex items-center relative"
+      style="background-image: url('./images/Home_Carroussel.jpg')">
+      <div class="flex flex-col justify-between items-center p-4">
+        <div class="text-white mb-6">
+          <h2 class="text-2xl font-bold">Agricultural and Organic</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis
+            sint impedit id qui corrupti <br />soluta beatae velit esse
+            necessitatibus? Quibusdam inventore maiores esse soluta eaque veniam
+            expedita perferendis doloremque dignissimos.
+          </p>
+        </div>
+        <div class="main-header-buttons">
+          <button
+            class="bg-yellow-300 text-gray-600 px-4 py-2 rounded-full hover:bg-yellow-400">
+            Discutons <i class="bi bi-box-arrow-up-right text-1xl"></i>
+          </button>
+          <button
+            class="bg-transparent text-white px-4 py-2 border border-white-300 rounded-full hover:bg-yellow-400">
+            Nos services <i class="bi bi-box-arrow-up-right text-1xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex justify-between items-center gap-4 relative -top-25 p-4">
+      <div class="aspect-video w-full overflow-hidden rounded-md relative">
+        <img
+          src="./images/FAO_Statistic_Landing.jpg"
+          alt="FAO statistics"
+          class="w-full h-full object-cover" />
+        <div class="absolute inset-0 flex justify-center items-end p-3">
+          <h2
+            class="flex justify-center items-center bg-white w-full p-3 h-20 rounded-md">
+            Indicateurs FAO
+          </h2>
+        </div>
+      </div>
+
+      <div class="aspect-video w-full overflow-hidden rounded-md">
+        <img
+          src="./images/meteo.png"
+          alt="Météo"
+          class="w-full h-full object-cover" />
+      </div>
+
+      <div class="aspect-video w-full overflow-hidden rounded-md">
+        <img
+          src="./images/Formation_Landing.jpg"
+          alt="Formation"
+          class="w-full h-full object-cover" />
+      </div>
+    </div>
+    <div class="flex justify-between -top-10 relative p-4">
+        <h2>We are confident</h2>
+        <div class="flex gap-8">
+            <div class="flex items-center gap-2">
+                <i class="bi bi-hand-thumbs-up text-white bg-green-900 flex justify-center items-center text-2xl rounded-md w-12 h-12"></i>
+                <div>
+                    <h3>98%</h3>
+                    <p class="text-gray-500">de client satisfait</p>
+                </div>
             </div>
-            <div class="main-header-buttons">
-                <button class="bg-yellow-300 text-gray-600 px-4 py-2 rounded-full hover:bg-yellow-400">Discutons <i class="bi bi-box-arrow-up-right text-1xl"></i></button>
-                <button class="bg-transparent text-white px-4 py-2 border border-white-300 rounded-full hover:bg-yellow-400">Nos services <i class="bi bi-box-arrow-up-right text-1xl"></i></button>
+            <div class="flex items-center gap-2">
+                <i class="bi bi-house-heart-fill text-white bg-green-900 flex justify-center items-center p-4 text-2xl rounded-md w-12 h-12"></i>
+                <div>
+                    <h3>134+</h3>
+                    <p class="text-gray-500">agriculteurs formés</p>
+                </div>
             </div>
         </div>
-    </main>
-</body>
+    </div>
+    <div class="flex justify-center w-8/9 justify-self-center h-64 gap-4  p-4">
+        <section class="flex flex-col justify-between w-full bg-yellow-300 p-4 h-64 overflow-hidden flex-1 rounded-md">
+            <div class="flex justify-between">
+                <h4>lundi 1 déc.</h4>
+                <p>06:56</p>
+            </div>
+            <div class="flex items-center gap-4 justify-center">
+                <div class="flex flex-col items-center">
+                    <i class="bi bi-cloud-fill text-gray-600 text-5xl"></i>
+                    <h2 class="text-2xl font-bold text-gray-600">23.1°C</h2>
+                    <p class="text-gray-500">Cloudy <i class="bi bi-cloudy-fill text-blue-50"></i></p>
+
+                </div>
+            </div>
+            <div class="flex items-center justify-between gap-4 border-t border-gray-400">
+                <p><i class="bi bi-droplet-fill text-blue-500"></i>Humidity: 37%</p>
+                <p><i class="bi bi-cloud-rain-fill text-blue-50"></i> Rain: 0 mm</p>
+                <p><i class="bi bi-wind text-blue-50"></i> Wind: 4.8 km/h</p>
+            </div>
+        </section>
+        <section class=" flex justify-center  p-4 items-center flex-1 flex-col h-64 bg-green-900 text-white text-center overflow-hidden rounded-md">
+            <h2 class="text-3xl">Nous publions une liste régulièrement mise à jours des indicateurs de la FAO pour la région du Niger</h2>
+            <p>Vous Pouvez consulter l'indicateur: Indicator 2.c.1 - Indicator of (food) price anomalies</p>
+        </section>
+    </div>
+    <div class="relative top-10 w-8/9 justify-self-center p-4 ">
+        <h2 class="text-3xl text-green-1000 w-1/3">Jetez un coup d'oeil à nos dernières Formations</h2>
+        <div class="w-full overflow-hidden rounded-md flex gap-4 p-4">
+            <div class="flex-1 overflow-hidden rounded-md">
+              <img src="./images/Blog-img-1.jpg" alt="" class="w-full h-full object-cover"/>
+                <div>
+                    <div>
+                        <h4>Jardinnage</h4> 
+                         <p>Malika Malikatou, 2020-08-10</p>
+                    </div>
+                </div>
+              Lorem dolor
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae unde natus, culpa eius aliquam adipi...
+              Contre-Saison
+              Amir Amirou, 2019-09-29
+              Cras dapibus
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae unde natus, culpa eius aliquam adipi...
+              Plus de Details /
+              Plus de Details/
+            </div>
+            <div class="flex-1 overflow-hidden rounded-md">
+              <img src="./images/Blog-img-9.jpg" alt="" class="w-full h-full object-cover"/>
+            </div>
+          
+          </div>
+          
+    </div>
+  </body>
 </html>
