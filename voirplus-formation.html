@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="fr" class="h-full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Agritech app</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+  </head>
+  <body class="bg-gray-100 gap-4">
+    <header class="flex flex-col">
+      <div class="">
+        <div
+          class="bg-gray-100 sm:bg-yellow-100 p-2 sm:flex flex justify-between sm:justify-between gap-4">
+          <div
+            class="flex justify-between hidden lg:flex items-center text-sm mb-2 gap-2">
+            <span class="flex items-center gap-1">
+              <i class="bi bi-envelope text-1xl"></i>
+              <a href="#" class="hover:underline">support@agritech.com</a>
+            </span>
+            <span class="flex items-center gap-1 text-1xl">
+              <i class="bi bi-telephone text-1xl"></i> (0027) 99 98 97 96
+            </span>
+          </div>
+          <div
+            class="flex flex-2 justify-center sm:justify-start lg:justify-center items-center gap-2">
+            <img src="./images/logo.png" alt="Logo" class="w-12 h-12" />
+            <h2 class="font-bold text-xl">Agritech App</h2>
+          </div>
+          <div class="flex justify-between hidden md:flex items-center">
+            <div class="flex items-center gap-4">
+              <div class="flex items-center gap-1">
+                <img src="./images/Niger.png" alt="" class="w-8 h-6" />
+                <span class="text-1xl">NE</span>
+              </div>
+              <div class="flex gap-2 text-xl border-l-1 border-black pl-1">
+                <a href="#" class="hover:text-blue-500"
+                  ><i class="bi bi-twitter-x"></i
+                ></a>
+                <a href="#" class="hover:text-blue-700"
+                  ><i class="bi bi-facebook"></i
+                ></a>
+                <a href="#" class="hover:text-blue-600"
+                  ><i class="bi bi-linkedin"></i
+                ></a>
+                <a href="#" class="hover:text-pink-500"
+                  ><i class="bi bi-instagram"></i
+                ></a>
+                <a href="#" class="hover:text-black"
+                  ><i class="bi bi-tiktok"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <!-- Burger checkbox -->
+          <input type="checkbox" id="burger" class="hidden sm:hidden peer" />
+
+          <!-- Header mobile -->
+          <div
+            class="flex justify-between items-center p-4 md:hidden peer-checked:hidden">
+            <label for="burger" class="cursor-pointer text-2xl">
+              <i class="bi bi-list"></i>
+            </label>
+          </div>
+
+          <!-- Overlay -->
+          <label
+            for="burger"
+            class="fixed inset-0 bg-black/40 opacity-0 pointer-events-none peer-checked:opacity-100 peer-checked:pointer-events-auto transition md:hidden">
+          </label>
+
+          <!-- Menu panel -->
+          <aside
+            class="fixed top-0 left-0 h-full w-[95%] max-w-sm bg-white -translate-x-full peer-checked:translate-x-0 transition-transform duration-300 md:hidden z-50 p-6 flex flex-col gap-6">
+            <!-- Header menu -->
+            <div class="flex justify-between items-center">
+              <div class="flex items-center gap-2">
+                <img src="./images/logo.png" class="w-10 h-10" alt="" />
+                <h2 class="font-bold text-xl">Agritech App</h2>
+              </div>
+              <label for="burger" class="cursor-pointer text-2xl">
+                <i class="bi bi-x"></i>
+              </label>
+            </div>
+
+            <!-- Connect button -->
+            <a href="./connexion.html">
+                <button
+                class="bg-green-900 text-white px-4 py-1 rounded-full hover:bg-green-800 flex items-center gap-1">
+                Connect <i class="bi bi-box-arrow-in-left"></i>
+              </button>
+              </a>
+            <hr />
+
+            <!-- Links -->
+            <nav class="flex flex-col gap-4 text-lg">
+              <a href="./index.html" class="flex justify-between hover:text-green-700">
+                Home <i class="bi bi-arrow-up-right"></i>
+              </a>
+              <a href="#" class="flex justify-between hover:text-green-700">
+                Blogs <i class="bi bi-arrow-up-right"></i>
+              </a>
+              <a href="#" class="flex justify-between hover:text-green-700">
+                Météo <i class="bi bi-arrow-up-right"></i>
+              </a>
+              <a href="#" class="flex justify-between hover:text-green-700">
+                Indicateurs <i class="bi bi-arrow-up-right"></i>
+              </a>
+            </nav>
+
+            <hr />
+
+            <!-- Social + country -->
+            <div class="flex items-center gap-3">
+              <img src="./images/Niger.png" class="w-8 h-6" alt="" />
+              <span>NE</span>
+              <span class="mx-2">|</span>
+              <div class="flex gap-3 text-xl">
+                <i class="bi bi-twitter-x"></i>
+                <i class="bi bi-facebook"></i>
+                <i class="bi bi-linkedin"></i>
+                <i class="bi bi-instagram"></i>
+                <i class="bi bi-tiktok"></i>
+              </div>
+            </div>
+
+            <!-- Contact -->
+            <div class="text-sm space-y-2 mt-auto">
+              <p class="flex items-center gap-2">
+                <i class="bi bi-envelope"></i> support@agritech.com
+              </p>
+              <p class="flex items-center gap-2">
+                <i class="bi bi-telephone"></i> (00227) 99 98 97 96
+              </p>
+            </div>
+          </aside>
+        </div>
+
+        <nav
+          class="bg-white shadow p-4 flex sm:flex hidden justify-between items-center gap-4">
+          <div
+            class="flex items-center hidden lg:flex border border-gray-300 rounded-lg overflow-hidden w-96">
+            <i class="bi bi-search text-lg px-3"></i>
+            <input
+              type="search"
+              placeholder="Search anything..."
+              class="flex-1 border-l border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500 w-96" />
+          </div>
+          <div class="flex gap-4">
+            <a href="./index.html" class="hover:text-green-600 flex items-center gap-1"
+              >Home <i class="bi bi-arrow-up-right text-1xl"></i
+            ></a>
+            <a href="./Formation.html" class="hover:text-green-600 flex items-center gap-1"
+              >Formations <i class="bi bi-arrow-up-right text-1xl"></i
+            ></a>
+            <a href="#" class="hover:text-green-600 flex items-center gap-1"
+              >Météo <i class="bi bi-arrow-up-right text-1xl"></i
+            ></a>
+            <a href="#" class="hover:text-green-600 flex items-center gap-1"
+              >Indicateurs <i class="bi bi-arrow-up-right text-1xl"></i
+            ></a>
+          </div>
+          <a href="./connexion.html">
+            <button
+            class="bg-green-900 text-white px-4 py-1 rounded-full hover:bg-green-800 flex items-center gap-1">
+            Connect <i class="bi bi-box-arrow-in-left"></i>
+          </button>
+          </a>
+        </nav>
+      </div>
+    </header>
+<div class="w-[90%]  lg:w-[80%] justify-self-center">
+    <div
+    class="relative flex items-center  pb-20 justify-center h-full w-full pt-10 pb-10 justify-self-center  overflow-hidden">
+    <div class="text-white flex flex-col gap-3 absolute">
+      <span class="text-1xl">Home > > Détails formations</span>
+      <h2 class="text-3xl">Détails formations</h2>
+    </div>
+    
+    <img
+      src="./images/Home_Carroussel.jpg"
+      alt=""
+      class="w-full h-70 object-cover rounded-2xl overflow-hidden" />
+  </div>
+  <div class="flex gap-3 flex-col lg:flex-row  pb-20 border-b-1 border-black  justify-self-center">
+    <div class="flex justify-between lg:w-[500%] overflow-hidden rounded-lg  flex-col  gap-6">
+        <div class="flex bg-yellow-200 h-full rounded-lg flex-col p-4 items-center">
+            <img
+            src="./images/avatar-1.png"
+            alt=""
+            class="w-35 h-35 object-cover rounded-full" />
+            <h3 class="mt-4 mb-2 text-2xl font-bold">Malika Malikatou</h3>
+            <p class="mb-2">Spécialiste Environement</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente eaque id, cumque exercitationem magni voluptates ut fugit aut ipsum porro.</p>
+            <div class="flex gap-3 text-xl">
+                <i class="bi bi-twitter-x"></i>
+                <i class="bi bi-facebook"></i>
+                <i class="bi bi-linkedin"></i>
+                <i class="bi bi-instagram"></i>
+                <i class="bi bi-tiktok"></i>
+              </div>
+        </div>
+        <div class="bg-gray-300 flex p-4 rounded-lg flex-col justify-center items-center">
+            <h2>Catégories</h2>
+            <h3 class="text-green-600">Jardinnage</h3>
+        </div>
+    </div>
+    <div>
+        <h2 class="text-3xl">Lorem dolor</h2>
+        <div class="w-full h-64 overflow-hidden rounded-sm">
+            <img src="./images/Blog-img-1.jpg" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+          </div>
+          <div>
+            <p>By Malika Malikatou | Published on 10/08/2020</p>
+            <p class="w-[99%]">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae unde natus, culpa eius aliquam adipisci labore itaque doloremtLorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae unde natus, culpa eius aliquam adipisci labore itaque doloremtLorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae unde natus, culpa eius aliquam adipisci labore itaque doloremtLorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae unde natus, culpa eius aliquam adipisci labore itaque doloremtLorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae unde natus, culpa eius aliquam adipisci labore itaque doloremtLorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae unde natus, culpa eius aliquam adipisci labore itaque doloremtLorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae unde natus, culpa eius aliquam adipisci labore itaque doloremtLorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae unde natus, culpa eius aliquam adipisci labore itaque doloremtLorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Vitae unde natus, culpa eius aliquam adipisci labore itaque doloremtLorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae unde natus, culpa eius aliquam adipisci labore itaque doloremtLorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae unde natus, culpa eius aliquam adipisci labore itaque doloremt
+          </div>
+    </div>
+</div>
+
+<div class=" w-[95%] sm:w-[60%] mb-15 mt-15 font-sans">
+    <h2 class="text-xl font-bold mb-4 text-gray-800">Comments (7)</h2>
+  
+    <div class="space-y-3">
+      
+      <div class="border border-emerald-800 rounded-lg p-3 relative bg-white shadow-sm">
+        <div class="flex items-center text-sm">
+          <span class="font-bold text-gray-900">Mariam</span>
+          <span class="ml-1 text-emerald-700">(mariam76@example.com)</span>
+        </div>
+        <div class="text-xs text-gray-400 mt-1">01/12/2025 06:14:53</div>
+        <div class="mt-2 text-gray-700 text-sm">Merci du partage.</div>
+        <button class="absolute top-3 right-3 text-gray-400 hover:text-gray-600">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 10h10a8 8 0 018 8v2M3 10l6 6m-6-6l6-6" />
+          </svg>
+        </button>
+      </div>
+  
+      <div class="border border-emerald-800 rounded-lg p-3 relative bg-white shadow-sm">
+        <div class="flex items-center text-sm">
+          <span class="font-bold text-gray-900">Idi</span>
+          <span class="ml-1 text-emerald-700">(idi6@example.com)</span>
+        </div>
+        <div class="text-xs text-gray-400 mt-1">01/12/2025 05:14:53</div>
+        <div class="mt-2 text-gray-700 text-sm">Formation intéressante!</div>
+        <button class="absolute top-3 right-3 text-gray-400 hover:text-gray-600">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 10h10a8 8 0 018 8v2M3 10l6 6m-6-6l6-6" />
+          </svg>
+        </button>
+      </div>
+  
+      <div class="border border-emerald-800 rounded-lg p-3 relative bg-white shadow-sm">
+        <div class="flex items-center text-sm">
+          <span class="font-bold text-gray-900">Mariam</span>
+          <span class="ml-1 text-emerald-700">(mariam95@example.com)</span>
+        </div>
+        <div class="text-xs text-gray-400 mt-1">01/12/2025 04:14:53</div>
+        <div class="mt-2 text-gray-700 text-sm">Merci du partage.</div>
+        <button class="absolute top-3 right-3 text-gray-400 hover:text-gray-600">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 10h10a8 8 0 018 8v2M3 10l6 6m-6-6l6-6" />
+          </svg>
+        </button>
+      </div>
+  
+      <div class="border border-emerald-800 rounded-lg p-3 relative bg-white shadow-sm">
+        <div class="flex items-center text-sm">
+          <span class="font-bold text-gray-900">Ramatou</span>
+          <span class="ml-1 text-emerald-700">(ramatou97@example.com)</span>
+        </div>
+        <div class="text-xs text-gray-400 mt-1">01/12/2025 03:14:53</div>
+        <div class="mt-2 text-gray-700 text-sm font-medium italic">Excellente Formation!</div>
+        <button class="absolute top-3 right-3 text-gray-400 hover:text-gray-600">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 10h10a8 8 0 018 8v2M3 10l6 6m-6-6l6-6" />
+          </svg>
+        </button>
+      </div>
+    
+          <div class="border border-emerald-800 rounded-lg p-3 relative bg-white">
+            <div class="flex items-center text-sm">
+              <span class="font-bold text-gray-900">Salissou</span>
+              <span class="ml-1 text-emerald-700">(salissou31@example.com)</span>
+            </div>
+            <div class="text-xs text-gray-400 mt-1">01/12/2025 02:14:53</div>
+            <div class="mt-2 text-gray-700 text-sm">J'ais trouvé cet article très utile.</div>
+            <button class="absolute top-3 right-3 text-gray-400">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 10h10a8 8 0 018 8v2M3 10l6 6m-6-6l6-6" />
+              </svg>
+            </button>
+          </div>
+      
+          <div class="border border-emerald-800 rounded-lg p-3 relative bg-white">
+            <div class="flex items-center text-sm">
+              <span class="font-bold text-gray-900">oumma</span>
+              <span class="ml-1 text-emerald-700">(oumma73@example.com)</span>
+            </div>
+            <div class="text-xs text-gray-400 mt-1">01/12/2025 01:14:53</div>
+            <div class="mt-2 text-gray-700 text-sm">Formation intéressante!</div>
+            <button class="absolute top-3 right-3 text-gray-400">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 10h10a8 8 0 018 8v2M3 10l6 6m-6-6l6-6" />
+              </svg>
+            </button>
+          </div>
+      
+          <div class="border border-emerald-800 rounded-lg p-3 relative bg-white">
+            <div class="flex items-center text-sm">
+              <span class="font-bold text-gray-900">Mariam</span>
+              <span class="ml-1 text-emerald-700">(mariam42@example.com)</span>
+            </div>
+            <div class="text-xs text-gray-400 mt-1">01/12/2025 00:14:53</div>
+            <div class="mt-2 text-gray-700 text-sm">Excellente Formation!</div>
+            <button class="absolute top-3 right-3 text-gray-400">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 10h10a8 8 0 018 8v2M3 10l6 6m-6-6l6-6" />
+              </svg>
+            </button>
+          </div>
+      
+    </div>
+  </div>
+  <div class="w-[70%] p-4 mb-15 justify-self-end rounded-lg bg-gray-300 font-sans">
+    <h3 class="text-gray-800 font-bold text-lg mb-4">Add a Comment</h3>
+  
+    <form class="space-y-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <input 
+          type="text" 
+          placeholder="Your Name" 
+          class="w-full p-3 rounded border-none text-sm bg-white outline-none placeholder-gray-400"
+        >
+        <input 
+          type="email" 
+          placeholder="Your Email" 
+          class="w-full p-3 rounded border-none text-sm bg-white outline-none placeholder-gray-400"
+        >
+      </div>
+  
+      <div class="relative">
+        <textarea 
+          placeholder="Your Comment" 
+          rows="6" 
+          class="w-full p-3 rounded border-none text-sm bg-white outline-none placeholder-gray-400"
+        ></textarea>
+        <div class="absolute bottom-2 right-2 text-gray-300 pointer-events-none">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 19l-4-4m4 0l-4 4" />
+          </svg>
+        </div>
+      </div>
+  
+      <div class="pt-2">
+        <button 
+          type="submit" 
+          class="bg-[#1a3a1a] hover:bg-emerald-900 text-white font-medium py-3 px-6 rounded-full flex items-center gap-2 transition-colors duration-200 text-sm"
+        >
+          Submit Comment
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 19L19 5m0 0H9m10 0v10" />
+          </svg>
+        </button>
+      </div>
+    </form>
+  </div>
+
+</div>
+    <div class="w-full bg-white flex flex-col justify-end p-4">
+      <div class="flex w-full justify-end gap-4 items-center">
+        <div class="flex gap-4 items-center mb-6 text-right">
+          <h3 class="text-lg font-semibold">Join Our Newsletter</h3>
+
+          <div class="flex sm:border rounded-lg sm:border-gray-400">
+            <input
+              type="email"
+              placeholder="Enter your email address"
+              class="flex-1 hidden sm:block" />
+            <button
+              type="submit"
+              class="bg-green-900 text-white px-3 py-2 rounded-full hover:bg-green-800">
+              S'abonner
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-between flex-col lg:flex-row gap-4">
+        <div class="flex flex-1 flex-col md:flex-row gap-4 justify-between">
+          <div class="flex-1">
+            <div class="flex items-center mb-3">
+              <img src="./images/favico.png" alt="" class="w-15 h-15" />
+              <h3>Agritech App</h3>
+            </div>
+            <p class="mb-3">
+              Organic farming avoids toxins. Farmers care for soil and grow
+              crops that are safe, natural.Farmers care for soil
+            </p>
+            <h4>Suivez-nous</h4>
+            <div class="flex gap-2 text-xl mt-2">
+              <a href="#" class="hover:text-blue-500"
+                ><i class="bi bi-twitter-x"></i
+              ></a>
+              <a href="#" class="hover:text-blue-700"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <a href="#" class="hover:text-blue-600"
+                ><i class="bi bi-linkedin"></i
+              ></a>
+              <a href="#" class="hover:text-pink-500"
+                ><i class="bi bi-instagram"></i
+              ></a>
+              <a href="#" class="hover:text-black"
+                ><i class="bi bi-tiktok"></i
+              ></a>
+            </div>
+          </div>
+          <div class="flex-1">
+            <h3 class="mb-2 mt-5">Liens Utiles</h3>
+            <ul class="leading-relaxed space-y-2">
+              <li><a href="#"> >> Home</a></li>
+              <li><a href="#"> >> Formations</a></li>
+              <li><a href="#"> >> Météo</a></li>
+              <li><a href="#"> >> Indicateurs</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex flex-1 flex-col md:flex-row gap-4 justify-between">
+          <div class="flex-1">
+            <h3 class="mb-2 mt-5">Nos Services</h3>
+            <ul class="leading-relaxed space-y-2">
+              <li><a href="#"> >> Home</a></li>
+              <li><a href="#"> >> Formations</a></li>
+              <li><a href="#"> >> Météo</a></li>
+              <li><a href="#"> >> Indicateurs</a></li>
+            </ul>
+          </div>
+          <div class="flex-1">
+            <div class="flex gap-2 items-center mb-3">
+              <i class="bi bi-telephone text-3xl"></i>
+              <div>
+                <h3>Contacter Nous</h3>
+                <p>Phone:</p>
+                <p>(00227) 99 98 97 96</p>
+              </div>
+            </div>
+            <div class="flex gap-2 items-center mb-3 mt-5">
+              <i class="bi bi-geo-alt-fill text-3xl"></i>
+              <div>
+                <p>Location:</p>
+                <p>Niamey, Niger</p>
+              </div>
+            </div>
+            <div class="flex gap-2 items-center">
+              <i class="bi bi-envelope text-3xl"></i>
+              <div>
+                <p>E-mail:</p>
+                <p>support@agritech.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer
+      class="p-8 flex bg-green-900 pl-8 hover:bg-green-800 items-center">
+      <p class="text-white text-1xl">
+        &copy; 2025 Codeloccol. All rights reserved.
+      </p>
+    </footer>
+  </body>
+</html>

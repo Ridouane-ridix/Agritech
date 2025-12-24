@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="fr" class="h-full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Agritech app</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+  </head>
+  <body class="bg-gray-100 relative gap-4">
+    <header class="flex flex-col">
+      <div class="">
+        <div
+          class="bg-gray-100 sm:bg-yellow-100 p-2 sm:flex flex justify-between sm:justify-between gap-4">
+          <div
+            class="flex justify-between hidden lg:flex items-center text-sm mb-2 gap-2">
+            <span class="flex items-center gap-1">
+              <i class="bi bi-envelope text-1xl"></i>
+              <a href="#" class="hover:underline">support@agritech.com</a>
+            </span>
+            <span class="flex items-center gap-1 text-1xl">
+              <i class="bi bi-telephone text-1xl"></i> (0027) 99 98 97 96
+            </span>
+          </div>
+          <div
+            class="flex flex-2 justify-center sm:justify-start lg:justify-center items-center gap-2">
+            <img src="./images/logo.png" alt="Logo" class="w-12 h-12" />
+            <h2 class="font-bold text-xl">Agritech App</h2>
+          </div>
+          <div class="flex justify-between hidden md:flex items-center">
+            <div class="flex items-center gap-4">
+              <div class="flex items-center gap-1">
+                <img src="./images/Niger.png" alt="" class="w-8 h-6" />
+                <span class="text-1xl">NE</span>
+              </div>
+              <div class="flex gap-2 text-xl border-l-1 border-black pl-1">
+                <a href="#" class="hover:text-blue-500"
+                  ><i class="bi bi-twitter-x"></i
+                ></a>
+                <a href="#" class="hover:text-blue-700"
+                  ><i class="bi bi-facebook"></i
+                ></a>
+                <a href="#" class="hover:text-blue-600"
+                  ><i class="bi bi-linkedin"></i
+                ></a>
+                <a href="#" class="hover:text-pink-500"
+                  ><i class="bi bi-instagram"></i
+                ></a>
+                <a href="#" class="hover:text-black"
+                  ><i class="bi bi-tiktok"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <!-- Burger checkbox -->
+          <input type="checkbox" id="burger" class="hidden sm:hidden peer" />
+
+          <!-- Header mobile -->
+          <div
+            class="flex justify-between items-center p-4 md:hidden peer-checked:hidden">
+            <label for="burger" class="cursor-pointer text-2xl">
+              <i class="bi bi-list"></i>
+            </label>
+          </div>
+
+          <!-- Overlay -->
+          <label
+            for="burger"
+            class="fixed inset-0 bg-black/40 opacity-0 pointer-events-none peer-checked:opacity-100 peer-checked:pointer-events-auto transition md:hidden">
+          </label>
+
+          <!-- Menu panel -->
+          <aside
+            class="fixed top-0 left-0 h-full w-[95%] max-w-sm bg-white -translate-x-full peer-checked:translate-x-0 transition-transform duration-300 md:hidden z-50 p-6 flex flex-col gap-6">
+            <!-- Header menu -->
+            <div class="flex justify-between items-center">
+              <div class="flex items-center gap-2">
+                <img src="./images/logo.png" class="w-10 h-10" alt="" />
+                <h2 class="font-bold text-xl">Agritech App</h2>
+              </div>
+              <label for="burger" class="cursor-pointer text-2xl">
+                <i class="bi bi-x"></i>
+              </label>
+            </div>
+
+            <!-- Connect button -->
+            <a href="./connexion.html">
+              <button
+              class="bg-green-900 text-white px-4 py-1 rounded-full hover:bg-green-800 flex items-center gap-1">
+              Connect <i class="bi bi-box-arrow-in-left"></i>
+            </button>
+            </a>
+
+            <hr />
+
+            <!-- Links -->
+            <nav class="flex flex-col gap-4 text-lg">
+              <a href="./index.html" class="flex justify-between hover:text-green-700">
+                Home <i class="bi bi-arrow-up-right"></i>
+              </a>
+              <a href="#" class="flex justify-between hover:text-green-700">
+                Blogs <i class="bi bi-arrow-up-right"></i>
+              </a>
+              <a href="#" class="flex justify-between hover:text-green-700">
+                Météo <i class="bi bi-arrow-up-right"></i>
+              </a>
+              <a href="#" class="flex justify-between hover:text-green-700">
+                Indicateurs <i class="bi bi-arrow-up-right"></i>
+              </a>
+            </nav>
+
+            <hr />
+
+            <!-- Social + country -->
+            <div class="flex items-center gap-3">
+              <img src="./images/Niger.png" class="w-8 h-6" alt="" />
+              <span>NE</span>
+              <span class="mx-2">|</span>
+              <div class="flex gap-3 text-xl">
+                <i class="bi bi-twitter-x"></i>
+                <i class="bi bi-facebook"></i>
+                <i class="bi bi-linkedin"></i>
+                <i class="bi bi-instagram"></i>
+                <i class="bi bi-tiktok"></i>
+              </div>
+            </div>
+
+            <!-- Contact -->
+            <div class="text-sm space-y-2 mt-auto">
+              <p class="flex items-center gap-2">
+                <i class="bi bi-envelope"></i> support@agritech.com
+              </p>
+              <p class="flex items-center gap-2">
+                <i class="bi bi-telephone"></i> (00227) 99 98 97 96
+              </p>
+            </div>
+          </aside>
+        </div>
+
+        <nav
+          class="bg-white shadow p-4 flex sm:flex hidden justify-between items-center gap-4">
+          <div
+            class="flex items-center hidden lg:flex border border-gray-300 rounded-lg overflow-hidden w-96">
+            <i class="bi bi-search text-lg px-3"></i>
+            <input
+              type="search"
+              placeholder="Search anything..."
+              class="flex-1 border-l border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500 w-96" />
+          </div>
+          <div class="flex gap-4">
+            <a href="./index.html" class="hover:text-green-600 flex items-center gap-1"
+              >Home <i class="bi bi-arrow-up-right text-1xl"></i
+            ></a>
+            <a href="#" class="hover:text-green-600 flex items-center gap-1"
+              >Formations <i class="bi bi-arrow-up-right text-1xl"></i
+            ></a>
+            <a href="#" class="hover:text-green-600 flex items-center gap-1"
+              >Météo <i class="bi bi-arrow-up-right text-1xl"></i
+            ></a>
+            <a href="#" class="hover:text-green-600 flex items-center gap-1"
+              >Indicateurs <i class="bi bi-arrow-up-right text-1xl"></i
+            ></a>
+          </div>
+          <a href="./connexion.html">
+            <button
+            class="bg-green-900 text-white px-4 py-1 rounded-full hover:bg-green-800 flex items-center gap-1">
+            Connect <i class="bi bi-box-arrow-in-left"></i>
+          </button>
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <div
+      class="relative flex items-center justify-center h-full w-8/9 justify-self-center p-4 overflow-hidden">
+      <div class="text-white flex flex-col gap-3 absolute">
+        <span class="text-1xl">Home > > Nos formations</span>
+        <h2 class="text-3xl">Nos formations</h2>
+      </div>
+
+      <img
+        src="./images/Home_Carroussel.jpg"
+        alt=""
+        class="w-full h-70 object-cover rounded-2xl overflow-hidden" />
+    </div>
+
+    <div class="relative top-10 w-8/9 justify-self-center p-4">
+      <h2 class="text-2xl sm:text-3xl text-green-1000 w-4/5 w-1/3">Toutes nos Formations</h2>
+      <div
+        class="w-full flex flex-col md:flex-row lg:grid-cols-3 md:grid md:grid-cols-2 gap-6">
+        <!-- CARD 1 -->
+<div class="flex-1 flex flex-col items-center text-center group">
+  <div class="relative w-full mb-4">
+    <div class="w-full h-64 overflow-hidden rounded-sm">
+      <img src="./images/Blog-img-1.jpg" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+    </div>
+    <div class="absolute -bottom-6 left-6 bg-[#e9e24b] w-20 h-20 rounded-full flex flex-col items-center justify-center">
+      <h2 class="text-xl font-bold">10</h2><p class="text-[10px]">08/2020</p>
+    </div>
+  </div>
+  <div class="mt-8 px-4">
+    <h4 class="text-emerald-500 text-sm mb-2">Jardinnage</h4>
+    <h3 class="text-2xl font-bold mb-1">Lorem dolor</h3>
+    <p class="text-gray-500 text-sm mb-4">Malika Malikatou</p>
+    <p class="text-gray-600 text-sm mb-4 max-w-[280px]">Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+    <div class="flex justify-center gap-2 text-gray-400 text-sm mb-6">
+      <i class="bi bi-chat-left-text"></i><span>7 comments</span>
+    </div>
+    <a href="./voirplus-formation.html" class="inline-flex w-44 py-3 rounded-full bg-[#1a3319] text-white justify-center gap-2 hover:bg-emerald-900">
+      Voir plus <i class="bi bi-box-arrow-up-right"></i>
+    </a>
+  </div>
+</div>
+
+<!-- CARD 2 -->
+<div class="flex-1 flex flex-col items-center text-center group">
+  <div class="relative w-full mb-4">
+    <div class="w-full h-64 overflow-hidden rounded-sm">
+      <img src="./images/Blog-img-9.jpg" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+    </div>
+    <div class="absolute -bottom-6 left-6 bg-[#e9e24b] w-20 h-20 rounded-full flex flex-col items-center justify-center">
+      <h2 class="text-xl font-bold">29</h2><p class="text-[10px]">09/2019</p>
+    </div>
+  </div>
+  <div class="mt-8 px-4">
+    <h4 class="text-emerald-500 text-sm mb-2">Contre-Saison</h4>
+    <h3 class="text-2xl font-bold mb-1">Cras dapibus</h3>
+    <p class="text-gray-500 text-sm mb-4">Amir Amirou</p>
+    <p class="text-gray-600 text-sm mb-4 max-w-[280px]">Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+    <div class="flex justify-center gap-2 text-gray-400 text-sm mb-6">
+      <i class="bi bi-chat-left-text"></i><span>3 comments</span>
+    </div>
+    <a href="#" class="inline-flex w-44 py-3 rounded-full bg-[#1a3319] text-white justify-center gap-2 hover:bg-emerald-900">
+      Voir plus <i class="bi bi-box-arrow-up-right"></i>
+    </a>
+  </div>
+</div>
+
+<!-- CARD 3 -->
+<div class="flex-1 flex flex-col items-center text-center group">
+  <div class="relative w-full mb-4">
+    <div class="w-full h-64 overflow-hidden rounded-sm">
+      <img src="./images/Blog-img-4.jpg" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+    </div>
+    <div class="absolute -bottom-6 left-6 bg-[#e9e24b] w-20 h-20 rounded-full flex flex-col items-center justify-center">
+      <h2 class="text-xl font-bold">26</h2><p class="text-[10px]">07/2019</p>
+    </div>
+  </div>
+  <div class="mt-8 px-4">
+    <h4 class="text-emerald-500 text-sm mb-2">Jardinnage</h4>
+    <h3 class="text-2xl font-bold mb-1">Lorem ipsum</h3>
+    <p class="text-gray-500 text-sm mb-4">Abdou Abdourahmane</p>
+    <p class="text-gray-600 text-sm mb-4 max-w-[280px]">Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+    <div class="flex justify-center gap-2 text-gray-400 text-sm mb-6">
+      <i class="bi bi-chat-left-text"></i><span>4 comments</span>
+    </div>
+    <a href="#" class="inline-flex w-44 py-3 rounded-full bg-[#1a3319] text-white justify-center gap-2 hover:bg-emerald-900">
+      Voir plus <i class="bi bi-box-arrow-up-right"></i>
+    </a>
+  </div>
+</div>
+
+<!-- CARD 4 -->
+<div class="flex-1 flex flex-col items-center text-center group">
+  <div class="relative w-full mb-4">
+    <div class="w-full h-64 overflow-hidden rounded-sm">
+      <img src="./images/Blog-img-10.jpg" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+    </div>
+    <div class="absolute -bottom-6 left-6 bg-[#e9e24b] w-20 h-20 rounded-full flex flex-col items-center justify-center">
+      <h2 class="text-xl font-bold">29</h2><p class="text-[10px]">08/2019</p>
+    </div>
+  </div>
+  <div class="mt-8 px-4">
+    <h4 class="text-emerald-500 text-sm mb-2">Désertification</h4>
+    <h3 class="text-2xl font-bold mb-1">Ultricies nec</h3>
+    <p class="text-gray-500 text-sm mb-4">Leila Leilatou</p>
+    <p class="text-gray-600 text-sm mb-4 max-w-[280px]">Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+    <div class="flex justify-center gap-2 text-gray-400 text-sm mb-6">
+      <i class="bi bi-chat-left-text"></i><span>5 comments</span>
+    </div>
+    <a href="#" class="inline-flex w-44 py-3 rounded-full bg-[#1a3319] text-white justify-center gap-2 hover:bg-emerald-900">
+      Voir plus <i class="bi bi-box-arrow-up-right"></i>
+    </a>
+  </div>
+</div>
+
+<!-- CARD 5 -->
+<div class="flex-1 flex flex-col items-center text-center group">
+  <div class="relative w-full mb-4">
+    <div class="w-full h-64 overflow-hidden rounded-sm">
+      <img src="./images/Blog-img-2.jpg" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+    </div>
+    <div class="absolute -bottom-6 left-6 bg-[#e9e24b] w-20 h-20 rounded-full flex flex-col items-center justify-center">
+      <h2 class="text-xl font-bold">02</h2><p class="text-[10px]">07/2019</p>
+    </div>
+  </div>
+  <div class="mt-8 px-4">
+    <h4 class="text-emerald-500 text-sm mb-2">Désertification</h4>
+    <h3 class="text-2xl font-bold mb-1">Cras dapibus</h3>
+    <p class="text-gray-500 text-sm mb-4">Leila Leilatou</p>
+    <p class="text-gray-600 text-sm mb-4 max-w-[280px]">Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+    <div class="flex justify-center gap-2 text-gray-400 text-sm mb-6">
+      <i class="bi bi-chat-left-text"></i><span>2 comments</span>
+    </div>
+    <a href="#" class="inline-flex w-44 py-3 rounded-full bg-[#1a3319] text-white justify-center gap-2 hover:bg-emerald-900">
+      Voir plus <i class="bi bi-box-arrow-up-right"></i>
+    </a>
+  </div>
+</div>
+
+<!-- CARD 6 -->
+<div class="flex-1 flex flex-col items-center text-center group">
+  <div class="relative w-full mb-4">
+    <div class="w-full h-64 overflow-hidden rounded-sm">
+      <img src="./images/Blog-img-3.jpg" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+    </div>
+    <div class="absolute -bottom-6 left-6 bg-[#e9e24b] w-20 h-20 rounded-full flex flex-col items-center justify-center">
+      <h2 class="text-xl font-bold">19</h2><p class="text-[10px]">02/2019</p>
+    </div>
+  </div>
+  <div class="mt-8 px-4">
+    <h4 class="text-emerald-500 text-sm mb-2">Pépinières</h4>
+    <h3 class="text-2xl font-bold mb-1">Lorem dolor</h3>
+    <p class="text-gray-500 text-sm mb-4">Abdou Abdourahmane</p>
+    <p class="text-gray-600 text-sm mb-4 max-w-[280px]">Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+    <div class="flex justify-center gap-2 text-gray-400 text-sm mb-6">
+      <i class="bi bi-chat-left-text"></i><span>4 comments</span>
+    </div>
+    <a href="#" class="inline-flex w-44 py-3 rounded-full bg-[#1a3319] text-white justify-center gap-2 hover:bg-emerald-900">
+      Voir plus <i class="bi bi-box-arrow-up-right"></i>
+    </a>
+  </div>
+</div>
+
+<!-- CARD 7 -->
+<div class="flex-1 flex flex-col items-center text-center group">
+  <div class="relative w-full mb-4">
+    <div class="w-full h-64 overflow-hidden rounded-sm">
+      <img src="./images/Blog-img-7.jpg" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+    </div>
+    <div class="absolute -bottom-6 left-6 bg-[#e9e24b] w-20 h-20 rounded-full flex flex-col items-center justify-center">
+      <h2 class="text-xl font-bold">16</h2><p class="text-[10px]">09/2014</p>
+    </div>
+  </div>
+  <div class="mt-8 px-4">
+    <h4 class="text-emerald-500 text-sm mb-2">Jardinnage</h4>
+    <h3 class="text-2xl font-bold mb-1">Donec sodales</h3>
+    <p class="text-gray-500 text-sm mb-4">Amir Amirou</p>
+    <p class="text-gray-600 text-sm mb-4 max-w-[280px]">Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+    <div class="flex justify-center gap-2 text-gray-400 text-sm mb-6">
+      <i class="bi bi-chat-left-text"></i><span>3 comments</span>
+    </div>
+    <a href="#" class="inline-flex w-44 py-3 rounded-full bg-[#1a3319] text-white justify-center gap-2 hover:bg-emerald-900">
+      Voir plus <i class="bi bi-box-arrow-up-right"></i>
+    </a>
+  </div>
+</div>
+
+<!-- CARD 8 -->
+<div class="flex-1 flex flex-col items-center text-center group">
+  <div class="relative w-full mb-4">
+    <div class="w-full h-64 overflow-hidden rounded-sm">
+      <img src="./images/Blog-img-8.jpg" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+    </div>
+    <div class="absolute -bottom-6 left-6 bg-[#e9e24b] w-20 h-20 rounded-full flex flex-col items-center justify-center">
+      <h2 class="text-xl font-bold">26</h2><p class="text-[10px]">07/2019</p>
+    </div>
+  </div>
+  <div class="mt-8 px-4">
+    <h4 class="text-emerald-500 text-sm mb-2">Pépinières</h4>
+    <h3 class="text-2xl font-bold mb-1">Cras dapibus</h3>
+    <p class="text-gray-500 text-sm mb-4">Malika Malikatou</p>
+    <p class="text-gray-600 text-sm mb-4 max-w-[280px]">Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+    <div class="flex justify-center gap-2 text-gray-400 text-sm mb-6">
+      <i class="bi bi-chat-left-text"></i><span>4 comments</span>
+    </div>
+    <a href="#" class="inline-flex w-44 py-3 rounded-full bg-[#1a3319] text-white justify-center gap-2 hover:bg-emerald-900">
+      Voir plus <i class="bi bi-box-arrow-up-right"></i>
+    </a>
+  </div>
+</div>
+
+<!-- CARD 9 -->
+<div class="flex-1 flex flex-col items-center text-center group">
+  <div class="relative w-full mb-4">
+    <div class="w-full h-64 overflow-hidden rounded-sm">
+      <img src="./images/Blog-img-6.jpg" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+    </div>
+    <div class="absolute -bottom-6 left-6 bg-[#e9e24b] w-20 h-20 rounded-full flex flex-col items-center justify-center">
+      <h2 class="text-xl font-bold">18</h2><p class="text-[10px]">03/2018</p>
+    </div>
+  </div>
+  <div class="mt-8 px-4">
+    <h4 class="text-emerald-500 text-sm mb-2">Désertification</h4>
+    <h3 class="text-2xl font-bold mb-1">Cras dapibus</h3>
+    <p class="text-gray-500 text-sm mb-4">Abdou Abdourahmane</p>
+    <p class="text-gray-600 text-sm mb-4 max-w-[280px]">Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+    <div class="flex justify-center gap-2 text-gray-400 text-sm mb-6">
+      <i class="bi bi-chat-left-text"></i><span>4 comments</span>
+    </div>
+    <a href="#" class="inline-flex w-44 py-3 rounded-full bg-[#1a3319] text-white justify-center gap-2 hover:bg-emerald-900">
+      Voir plus <i class="bi bi-box-arrow-up-right"></i>
+    </a>
+  </div>
+</div>
+
+<!-- CARD 10 -->
+<div class="flex-1 flex flex-col items-center text-center group">
+  <div class="relative w-full mb-4">
+    <div class="w-full h-64 overflow-hidden rounded-sm">
+      <img src="./images/Blog-img-5.jpg" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+    </div>
+    <div class="absolute -bottom-6 left-6 bg-[#e9e24b] w-20 h-20 rounded-full flex flex-col items-center justify-center">
+      <h2 class="text-xl font-bold">25</h2><p class="text-[10px]">03/2011</p>
+    </div>
+  </div>
+  <div class="mt-8 px-4">
+    <h4 class="text-emerald-500 text-sm mb-2">Désertification</h4>
+    <h3 class="text-2xl font-bold mb-1">Ultricies nec</h3>
+    <p class="text-gray-500 text-sm mb-4">Amir Amirou</p>
+    <p class="text-gray-600 text-sm mb-4 max-w-[280px]">Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+    <div class="flex justify-center gap-2 text-gray-400 text-sm mb-6">
+      <i class="bi bi-chat-left-text"></i><span>7 comments</span>
+    </div>
+    <a href="#" class="inline-flex w-44 py-3 rounded-full bg-[#1a3319] text-white justify-center gap-2 hover:bg-emerald-900">
+      Voir plus <i class="bi bi-box-arrow-up-right"></i>
+    </a>
+  </div>
+</div>
+
+      </div>
+    </div>
+    <div class="w-full relative top-30 bg-white flex flex-col justify-end p-4">
+      <div class="flex w-full justify-end gap-4 items-center">
+        <div class="flex gap-4 items-center mb-6 text-right">
+          <h3 class="text-lg font-semibold">Join Our Newsletter</h3>
+
+          <div class="flex sm:border rounded-lg sm:border-gray-400">
+            <input
+              type="email"
+              placeholder="Enter your email address"
+              class="flex-1 hidden sm:block" />
+            <button
+              type="submit"
+              class="bg-green-900 text-white px-3 py-2 rounded-full hover:bg-green-800">
+              S'abonner
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-between flex-col lg:flex-row gap-4">
+        <div class="flex flex-1 flex-col md:flex-row gap-4 justify-between">
+          <div class="flex-1">
+            <div class="flex items-center mb-3">
+              <img src="./images/favico.png" alt="" class="w-15 h-15" />
+              <h3>Agritech App</h3>
+            </div>
+            <p class="mb-3">
+              Organic farming avoids toxins. Farmers care for soil and grow
+              crops that are safe, natural.Farmers care for soil
+            </p>
+            <h4>Suivez-nous</h4>
+            <div class="flex gap-2 text-xl mt-2">
+              <a href="#" class="hover:text-blue-500"
+                ><i class="bi bi-twitter-x"></i
+              ></a>
+              <a href="#" class="hover:text-blue-700"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <a href="#" class="hover:text-blue-600"
+                ><i class="bi bi-linkedin"></i
+              ></a>
+              <a href="#" class="hover:text-pink-500"
+                ><i class="bi bi-instagram"></i
+              ></a>
+              <a href="#" class="hover:text-black"
+                ><i class="bi bi-tiktok"></i
+              ></a>
+            </div>
+          </div>
+          <div class="flex-1">
+            <h3 class="mb-2 mt-5">Liens Utiles</h3>
+            <ul class="leading-relaxed space-y-2">
+              <li><a href="#"> >> Home</a></li>
+              <li><a href="#"> >> Formations</a></li>
+              <li><a href="#"> >> Météo</a></li>
+              <li><a href="#"> >> Indicateurs</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex flex-1 flex-col md:flex-row gap-4 justify-between">
+          <div class="flex-1">
+            <h3 class="mb-2 mt-5">Nos Services</h3>
+            <ul class="leading-relaxed space-y-2">
+              <li><a href="#"> >> Home</a></li>
+              <li><a href="#"> >> Formations</a></li>
+              <li><a href="#"> >> Météo</a></li>
+              <li><a href="#"> >> Indicateurs</a></li>
+            </ul>
+          </div>
+          <div class="flex-1">
+            <div class="flex gap-2 items-center mb-3">
+              <i class="bi bi-telephone text-3xl"></i>
+              <div>
+                <h3>Contacter Nous</h3>
+                <p>Phone:</p>
+                <p>(00227) 99 98 97 96</p>
+              </div>
+            </div>
+            <div class="flex gap-2 items-center mb-3 mt-5">
+              <i class="bi bi-geo-alt-fill text-3xl"></i>
+              <div>
+                <p>Location:</p>
+                <p>Niamey, Niger</p>
+              </div>
+            </div>
+            <div class="flex gap-2 items-center">
+              <i class="bi bi-envelope text-3xl"></i>
+              <div>
+                <p>E-mail:</p>
+                <p>support@agritech.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer
+      class="relative top-30 p-8 flex bg-green-900 pl-8 hover:bg-green-800 items-center">
+      <p class="text-white text-1xl">
+        &copy; 2025 Codeloccol. All rights reserved.
+      </p>
+    </footer>
+  </body>
+</html>
